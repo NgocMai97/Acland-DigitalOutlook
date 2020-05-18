@@ -3,47 +3,144 @@
   src: url("../assets/fonts/bitter/Bitter-Bold.ttf");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Bitter-Italic';
   src: url("../assets/fonts/bitter/Bitter-Italic.ttf");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Bitter-Regular';
   src: url("../assets/fonts/bitter/Bitter-Regular.ttf");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'SourceSansPro-Black';
   src: url("../assets/fonts/source_sans_pro/SourceSansPro-Black.ttf");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'SourceSansPro-Bold';
   src: url("../assets/fonts/source_sans_pro/SourceSansPro-Bold.ttf");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'SourceSansPro-Regular';
   src: url("../assets/fonts/source_sans_pro/SourceSansPro-Regular.ttf");
   font-weight: normal;
   font-style: normal; }
-
+@font-face {
+  font-family: 'SourceSansPro-SemiBold';
+  src: url("../assets/fonts/source_sans_pro/SourceSansPro-SemiBold.ttf");
+  font-weight: normal;
+  font-style: normal; }
 * {
   padding: 0;
   margin: 0; }
 
-.header__content {
-  display: flow-root; }
+body {
+  font-family: "SourceSanPro-Regular", Arial, Helvetica, sans-serif; }
 
-.header__menu ul {
-  display: flex;
-  line-height: 58px; }
-  .header__menu ul li {
-    display: block;
-    padding-right: 24px; }
+/**
+* Header
+**/
+.header {
+  box-shadow: 0px 3px 8px #e2e5dc;
+  padding: 10px 0; }
+  .header__content {
+    display: flow-root; }
+  .header__menu ul {
+    display: flex;
+    line-height: 58px;
+    margin: 0; }
+    .header__menu ul li {
+      display: block;
+      padding-right: 24px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 15px; }
+      .header__menu ul li a {
+        color: #192556;
+        font-family: "SourceSansPro-Bold", Arial, Helvetica, sans-serif; }
+      .header__menu ul li:last-child {
+        padding-right: 0; }
+        .header__menu ul li:last-child a {
+          font-size: 24px;
+          color: #40a9ff;
+          font-family: "SourceSansPro-Regular", Arial, Helvetica, sans-serif; }
+
+/**
+* Slider
+**/
+.slider {
+  background-image: url("../assets/images/bg-slide.jpg");
+  padding: 92px 0 275px; }
+  .slider__content {
+    padding-left: 121px; }
+  .slider__title {
+    font-size: 46px;
+    font-family: "Bitter-Bold", Arial, Helvetica, sans-serif;
+    color: #40a9ff;
+    line-height: 1.1;
+    display: initial; }
+  .slider__button {
+    display: flex;
+    margin-top: 13px; }
+    .slider__button span {
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 15px;
+      background-color: #192556;
+      border-radius: 13px;
+      padding: 10px 22px;
+      font-family: "SourceSansPro-Bold";
+      box-shadow: 1px 1px 6px #e2e6dd; }
+
+/**
+* Infomation
+**/
+.infomation {
+  margin-top: -100px; }
+  .infomation__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0;
+    color: #fff; }
+    .infomation__item > li {
+      background-color: #192556;
+      display: inline-block;
+      padding: 32px;
+      border-radius: 40px; }
+      .infomation__item > li ul {
+        margin: 0; }
+        .infomation__item > li ul li {
+          display: block; }
+      .infomation__item > li:nth-child(2) {
+        background-color: #3a89e6; }
+      .infomation__item > li:nth-child(3) {
+        background-color: #40a8fc; }
+      .infomation__item > li:nth-child(4) {
+        background-color: #6ecbff; }
+    .infomation__item-title {
+      font-family: "SourceSansPro-Bold",Arial, Helvetica, sans-serif;
+      font-size: 22px;
+      position: relative;
+      text-transform: uppercase;
+      padding-bottom: 20px; }
+      .infomation__item-title:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 4em;
+        height: 0.1em;
+        background-color: #fff; }
+    .infomation__item-content {
+      font-size: 13px;
+      line-height: 1.6;
+      padding: 20px 0; }
+    .infomation__item-more a {
+      color: #fff;
+      text-transform: uppercase;
+      font-family: "SourceSansPro-SemiBold", Arial, Helvetica, sans-serif; }
+
+/*# sourceMappingURL=style.css.map */
