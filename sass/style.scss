@@ -1,0 +1,20 @@
+@import "type";
+*{
+    padding:0;
+    margin: 0;
+}
+.header{
+    &__content{
+        display: flow-root;
+    }
+    &__menu{
+        ul{
+            display: flex;
+            line-height: 58px;
+            li{
+                display: block;
+                padding-right:24px;
+            }
+        }
+    }
+}

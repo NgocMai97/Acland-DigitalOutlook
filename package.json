@@ -1,0 +1,12 @@
+{
+  "name": "acland",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass sass/style.scss css/style.css -w"
+  },
+  "author": "",
+  "license": "ISC"
+}
