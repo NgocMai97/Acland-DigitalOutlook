@@ -3,42 +3,62 @@
   src: url("../assets/fonts/bitter/Bitter-Bold.ttf");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: 'Bitter-Italic';
   src: url("../assets/fonts/bitter/Bitter-Italic.ttf");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: 'Bitter-Regular';
   src: url("../assets/fonts/bitter/Bitter-Regular.ttf");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: 'SourceSansPro-Black';
   src: url("../assets/fonts/source_sans_pro/SourceSansPro-Black.ttf");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: 'SourceSansPro-Bold';
   src: url("../assets/fonts/source_sans_pro/SourceSansPro-Bold.ttf");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: 'SourceSansPro-Regular';
   src: url("../assets/fonts/source_sans_pro/SourceSansPro-Regular.ttf");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: 'SourceSansPro-SemiBold';
   src: url("../assets/fonts/source_sans_pro/SourceSansPro-SemiBold.ttf");
   font-weight: normal;
   font-style: normal; }
+
+@font-face {
+  font-family: 'SourceSansPro-Light';
+  src: url("../assets/fonts/source_sans_pro/SourceSansPro-Light.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
 * {
   padding: 0;
   margin: 0; }
 
 body {
   font-family: "SourceSanPro-Regular", Arial, Helvetica, sans-serif; }
+
+p {
+  margin-bottom: 10px; }
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px; } }
 
 /**
 * Header
@@ -73,7 +93,9 @@ body {
 **/
 .slider {
   background-image: url("../assets/images/bg-slide.jpg");
-  padding: 92px 0 275px; }
+  padding: 92px 0 275px;
+  background-size: cover;
+  background-repeat: no-repeat; }
   .slider__content {
     padding-left: 121px; }
   .slider__title {
@@ -90,43 +112,44 @@ body {
       color: #fff;
       font-size: 15px;
       background-color: #192556;
+      background-color: #21385e;
+      border: 1px solid #192556;
       border-radius: 13px;
       padding: 10px 22px;
-      font-family: "SourceSansPro-Bold";
-      box-shadow: 1px 1px 6px #e2e6dd; }
+      font-family: "SourceSansPro-Bold"; }
 
 /**
-* Infomation
+* Information
 **/
-.infomation {
+.information {
   margin-top: -100px; }
-  .infomation__item {
+  .information__item {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 0;
     color: #fff; }
-    .infomation__item > li {
+    .information__item > li {
       background-color: #192556;
       display: inline-block;
       padding: 32px;
       border-radius: 40px; }
-      .infomation__item > li ul {
+      .information__item > li ul {
         margin: 0; }
-        .infomation__item > li ul li {
+        .information__item > li ul li {
           display: block; }
-      .infomation__item > li:nth-child(2) {
+      .information__item > li:nth-child(2) {
         background-color: #3a89e6; }
-      .infomation__item > li:nth-child(3) {
+      .information__item > li:nth-child(3) {
         background-color: #40a8fc; }
-      .infomation__item > li:nth-child(4) {
+      .information__item > li:nth-child(4) {
         background-color: #6ecbff; }
-    .infomation__item-title {
+    .information__item-title {
       font-family: "SourceSansPro-Bold",Arial, Helvetica, sans-serif;
       font-size: 22px;
       position: relative;
       text-transform: uppercase;
       padding-bottom: 20px; }
-      .infomation__item-title:after {
+      .information__item-title:after {
         content: '';
         position: absolute;
         bottom: 0;
@@ -134,13 +157,36 @@ body {
         width: 4em;
         height: 0.1em;
         background-color: #fff; }
-    .infomation__item-content {
+    .information__item-content {
       font-size: 13px;
-      line-height: 1.6;
-      padding: 20px 0; }
-    .infomation__item-more a {
+      line-height: 1.7;
+      padding: 20px 0;
+      font-family: "SourceSansPro-SemiBold", Arial, Helvetica, sans-serif; }
+    .information__item-more a {
       color: #fff;
       text-transform: uppercase;
       font-family: "SourceSansPro-SemiBold", Arial, Helvetica, sans-serif; }
+      .information__item-more a i {
+        padding-left: 10px; }
 
-/*# sourceMappingURL=style.css.map */
+/**
+* Popup
+**/
+.modalInformation {
+  background-color: #192556;
+  width: 745px;
+  color: #fff;
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 17px 30px 45px;
+  z-index: 999; }
+  .modalInformation .modal-header h3 {
+    font-family: "SourceSansPro-Bold", Arial, Helvetica, sans-serif;
+    font-size: 20px; }
+  .modalInformation .modal-body ul li span {
+    font-family: "SourceSansPro-Bold", Arial, Helvetica, sans-serif; }
+  .modalInformation button {
+    font-weight: bold;
+    text-align: right; }

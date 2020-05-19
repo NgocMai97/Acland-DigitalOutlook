@@ -8,6 +8,15 @@ $blue-light: #40a9ff;
 body {
   font-family: "SourceSanPro-Regular", Arial, Helvetica, sans-serif;
 }
+p{
+  margin-bottom: 10px;
+}
+@media (min-width: 1200px){
+  .container{
+    width: 1170px;
+  }
+}
+
 /**
 * Header
 **/
@@ -50,6 +59,8 @@ body {
 .slider {
   background-image: url("../assets/images/bg-slide.jpg");
   padding: 92px 0 275px;
+  background-size: cover;
+  background-repeat: no-repeat;
   &__content {
     padding-left: 121px;
   }
@@ -68,17 +79,19 @@ body {
       color: #fff;
       font-size: 15px;
       background-color: $blue-bold;
+      background-color: #21385e;
+      border: 1px solid $blue-bold;
       border-radius: 13px;
       padding: 10px 22px;
       font-family: "SourceSansPro-Bold";
-      box-shadow: 1px 1px 6px #e2e6dd;
+  
     }
   }
 }
 /**
-* Infomation
+* Information
 **/
-.infomation{
+.information{
     margin-top:-100px;
     &__item{
         display: grid;
@@ -127,17 +140,55 @@ body {
         }
         &-content{
             font-size: 13px;
-            line-height: 1.6;
+            line-height: 1.7;
             padding:20px 0;
-        }
+            font-family: "SourceSansPro-SemiBold", Arial, Helvetica, sans-serif;
+            
+          }
         &-more{
             a{
                 color:#fff;
                 text-transform: uppercase;
                 font-family: "SourceSansPro-SemiBold", Arial, Helvetica, sans-serif;
-            }
+                i{
+                  padding-left: 10px;
+                }
+              }
             
             
         }
     }
+}
+/**
+* Popup
+**/
+.modalInformation{
+  background-color: $blue-bold;
+  width: 745px;
+  color:#fff;
+  position: absolute;
+  top:47%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 30px 17px 30px 45px;
+  z-index: 999;
+  & .modal-header{
+    h3{
+      font-family: "SourceSansPro-Bold", Arial, Helvetica, sans-serif;
+      font-size: 20px;
+    }
+  }
+  & .modal-body{
+    ul{
+      li{
+        span{
+          font-family: "SourceSansPro-Bold", Arial, Helvetica, sans-serif;
+        }
+      }
+    }
+  }
+  & button{
+    font-weight: bold;
+    text-align: right;
+  }
 }
